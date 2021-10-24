@@ -1,8 +1,8 @@
-import axios  from "axios";
+import customAxios from "./customAxios";
 
 class UserService{
     getUserId(phone){
-        return axios.get(`/api/users/uid?phone=${phone}`);
+        return customAxios.get(`/api/users/uid?phone=${phone}`);
     }
 }
 

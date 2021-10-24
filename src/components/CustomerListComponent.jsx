@@ -66,10 +66,10 @@ export default class CustomerListComponent extends Component {
                 <div>
                     <div className="card bg-light shadow p-3 mb-5 bg-white rounded">
                         <div className="row justify-content-between">
-                            <div className="col-4">
-                                <h4>Customer's List</h4>
+                            <div className="col">
+                                <p className="fw-bold">Customers</p>
                             </div>
-                            <div className="col-4">
+                            <div className="col">
                                 <div className="card">
                                     <Link to="/addCustomer" className="btn btn-primary align">Add Customer</Link>
                                 </div>
@@ -81,7 +81,7 @@ export default class CustomerListComponent extends Component {
                             <thead>
                                 <tr >
                                     <th scope="col">Customer</th>
-                                    <th scope="col">Transaction Type</th>
+                                    <th scope="col">Type</th>
                                     <th scope="col">Balance</th>
                                     <th scope="col" ></th>
                                 </tr>

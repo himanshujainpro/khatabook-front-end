@@ -31,10 +31,10 @@ export default class BalancePanel extends Component {
     render() {
         return (
             <div className="col d-flex justify-content-center">
-                <div className="card w-25" >
+                <div className="card" >
                     <div className={this.state.s} >
-                        <h5 className="card-title text-center" id="balText">{this.state.text}</h5>
-                        <p className="card-text text-white bg-dark" id="valText">{"₹ " + this.state.nb}</p>
+                        <p className="fw-bold text-center" id="balText">{this.state.text}</p>
+                        <p className="text-white text-center bg-dark" id="valText">{"₹ " + this.state.nb}</p>
                     </div>
                 </div>
             </div>
