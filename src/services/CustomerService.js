@@ -2,8 +2,6 @@ import customAxios from './customAxios';
 
 class CustomerService{
 
-    uid=localStorage.getItem("uid");
-    
     createCustomer(customer){  
         return customAxios.post("/api/customers", customer);
     }
@@ -12,16 +10,16 @@ class CustomerService{
         return customAxios.delete(`/api/customers?customer_id=${id}`);
     }
     
-    getCustomers(){
-        return customAxios.get(`/api/users/customers?userId=${this.uid}`);
+    getCustomers(uid){
+        return customAxios.get(`/api/users/customers?userId=${uid}`);
     }
 
-    getBalance(){
-        return customAxios.get(`/api/users/balance?userId=${this.uid}`);
+    getBalance(uid){
+        return customAxios.get(`/api/users/balance?userId=${uid}`);
     }
 
-    getBName(){
-        return customAxios.get(`/api/users/business-name?userId=${this.uid}`);
+    getBName(uid){
+        return customAxios.get(`/api/users/business-name?userId=${uid}`);
     }
 
     getCustomerName(id){

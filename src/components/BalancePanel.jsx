@@ -13,7 +13,7 @@ export default class BalancePanel extends Component {
     }
 
     componentDidMount() {
-        CustomerService.getBalance().then(res => {
+        CustomerService.getBalance(localStorage.getItem("uid")).then(res => {
             this.setState({ nb: res.data });
 
             if (this.state.nb > 0) {
@@ -30,6 +30,7 @@ export default class BalancePanel extends Component {
 
     render() {
         return (
+            
             <div className="col d-flex justify-content-center">
                 <div className="card" >
                     <div className={this.state.s} >

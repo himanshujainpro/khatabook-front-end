@@ -74,7 +74,7 @@ export default class TransactionsComponent extends Component {
                         <div className="row justify-content-between">
 
                             <div className="col">
-                                <div className="bg-light  p-3">
+                                <div className="bg-light">
                                     <p className="fw-bold">{this.state.customer_name}</p>
                                     <p>{this.state.customer_phone}</p>
                                 </div>
@@ -94,7 +94,6 @@ export default class TransactionsComponent extends Component {
                                     </div>
                                 </div>
                             </div>
-
                             <div className="col">
                                 <Dropdown>
                                     <Dropdown.Toggle variant="success">

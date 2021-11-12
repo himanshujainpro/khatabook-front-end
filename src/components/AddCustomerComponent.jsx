@@ -20,13 +20,14 @@ export default class AddCustomerComponent extends Component {
     
     createCustomer(e){
         e.preventDefault(); 
-        let customer={user_id:1,name:this.state.name,phone:this.state.phone};
+        let customer={user_id:localStorage.getItem("uid"),name:this.state.name,phone:this.state.phone};
         console.log(customer);
 
         CustomerService.createCustomer(customer).then(response=>{
             console.log(response);
             this.props.history.push('/book');
         }).catch(err=>{
+            document.body.classList.remove('loading-indicator');
             this.setState({error:err.response.data});
         });
     }

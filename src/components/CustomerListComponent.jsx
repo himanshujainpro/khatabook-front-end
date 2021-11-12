@@ -25,7 +25,7 @@ export default class CustomerListComponent extends Component {
     }
 
     componentDidMount() {
-        CustomerService.getCustomers().then((res) => {
+        CustomerService.getCustomers(localStorage.getItem("uid")).then((res) => {
             this.setState({ customers: res.data });
         });
     }

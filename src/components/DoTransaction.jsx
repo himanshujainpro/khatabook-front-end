@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CustomerService from '../services/CustomerService';
 import TransactionService from '../services/TransactionService';
-
+import { Redirect } from 'react-router';
 export default class DoTransaction extends Component {
 
     constructor(props) {
@@ -67,6 +67,7 @@ export default class DoTransaction extends Component {
     render() {
         return (
             <div>
+                {!localStorage.getItem("uid") && <Redirect to="/"/>}
                 <div className="container">
 
                     <div>
